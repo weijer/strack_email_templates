@@ -1,0 +1,19 @@
+{
+    "name": "mkcom/utilities",
+    "version": "0.1",
+    "description": "Utilities that simplify my life in developing Flow applications",
+    "type": "neos-package",
+    "require": {
+        "typo3/flow": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "MKcom\\Utilities": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "MKcom.Utilities"
+        }
+    }
+}
