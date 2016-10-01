@@ -1,19 +1,15 @@
 {
-    "name": "mkcom/utilities",
-    "version": "0.1",
-    "description": "Utilities that simplify my life in developing Flow applications",
-    "type": "neos-package",
-    "require": {
-        "typo3/flow": "*"
-    },
+    "name": "mkcom/utility-emailtemplates",
+    "description": "Utility package to parse templates for emails easily",
+    "type": "library",
     "autoload": {
         "psr-0": {
-            "MKcom\\Utilities": "Classes/"
+            "MKcom\\Utility\\": "Classes/"
         }
     },
     "extra": {
         "neos": {
-            "package-key": "MKcom.Utilities"
+            "package-key": "MKcom.Utility.EmailTemplates"
         }
     }
 }
