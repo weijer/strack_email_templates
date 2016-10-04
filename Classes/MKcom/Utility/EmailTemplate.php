@@ -5,8 +5,6 @@ namespace MKcom\Utility;
  * This file is part of the MKcom.Utility.EmailTemplates package.
  */
 
-use MKcom\Utility\Exception\EmailTemplateNotFoundException;
-
 /**
  * Class EmailTemplate
  *
@@ -39,10 +37,6 @@ class EmailTemplate
         }
 
         $template = file_get_contents($templatePath);
-
-        if (empty($template)) {
-            throw new EmailTemplateNotFoundException(sprintf('Template file (%s) could not be found or is empty.', $templatePath), 1475321855);
-        }
 
         foreach ($values as $key => $value) {
             $template = str_replace('{{' . $key . '}}', $value, $template);
