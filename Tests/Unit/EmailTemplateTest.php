@@ -3,6 +3,8 @@ namespace MKcom\Utility\Tests\Unit;
 
 /*
  * This file is part of the MKcom.SMS77 package.
+ *
+ * TODO: PHPUnit can mock the filesystem
  */
 
 use MKcom\Utility\EmailTemplate;
