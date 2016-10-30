@@ -3,18 +3,24 @@ namespace MKcom\Utility\Tests\Unit;
 
 /*
  * This file is part of the MKcom.SMS77 package.
- *
- * TODO: PHPUnit can mock the filesystem
  */
 
 use MKcom\Utility\EmailTemplate;
+use MKcom\Utility\Exception\EmailTemplateNotFoundException;
 use PHPUnit_Framework_TestCase;
 
+/**
+ * Class EmailTemplateTest
+ *
+ * @package MKcom\Utility\Tests\Unit
+ */
 class EmailTemplateTest extends PHPUnit_Framework_TestCase
 {
 
     /**
      * @test
+     *
+     * @return void
      */
     public function aTemplateCanBeLoaded()
     {
@@ -34,11 +40,24 @@ class EmailTemplateTest extends PHPUnit_Framework_TestCase
 
     /**
      * @test
+     *
+     * @return void
      */
     public function anExceptionWillBeThrownOnInvalidArguments()
     {
         $this->expectException(\InvalidArgumentException::class);
-        $emailTemplate = new EmailTemplate(null);
+        $emailTemplate = new EmailTemplate(NULL);
+    }
+
+    /**
+     * @test
+     *
+     * @return void
+     */
+    public function anExceptionWillBeThrownOnNotExistingTemplate()
+    {
+        $this->expectException(EmailTemplateNotFoundException::class);
+        $emailTemplate = new EmailTemplate('notExistingTemplate.html');
     }
 
 }
