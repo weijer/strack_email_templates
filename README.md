@@ -51,3 +51,11 @@ $emailTemplate = new EmailTemplate(__DIR__.'/Templates/myEmailTemplate.html', ar
 $emailBody = $emailTemplate->getBody();
 $emailSubject = $emailTemplate->getSubject();
 ```
+
+## Perfect Neos Flow Integration
+
+Works perfectly with **Neos Flow** and the `resource://`-Wrapper:
+
+```php
+$emailTemplate = new EmailTemplate('resource://Acme.Demo/Private/Email/Template/FooBar.html', array(...));
+```
