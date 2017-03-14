@@ -45,6 +45,7 @@ class EmailTemplate
         $template = file_get_contents($pathToTemplateFile);
 
         foreach ($values as $key => $value) {
+            $value = htmlspecialchars($value);
             $template = str_replace('{{' . $key . '}}', $value, $template);
         }
 
