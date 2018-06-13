@@ -1,5 +1,5 @@
 {
-    "name": "mkcom/utility-emailtemplates",
+    "name": "strack/email_templates",
     "type": "library",
     "description": "Utility package to parse templates for emails easily",
     "homepage": "https://github.com/mkeitsch/utility-emailtemplates",
