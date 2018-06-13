@@ -27,12 +27,19 @@ class EmailTemplate
 
     /**
      * EmailTemplate constructor.
-     *
-     * @param string $pathToTemplateFile
+     */
+    public function __construct()
+    {
+
+    }
+
+    /**
+     * 加载Html模板并替换变量值
+     * @param $pathToTemplateFile
      * @param array $values
      * @throws EmailTemplateNotFoundException
      */
-    public function __construct($pathToTemplateFile, $values = array())
+    public function loadHtml($pathToTemplateFile, $values = array())
     {
         if (!is_string($pathToTemplateFile) || empty($pathToTemplateFile)) {
             throw new \InvalidArgumentException('Argument "templatePath" is not defined (empty or not a string).', 1475321772);
